@@ -1,0 +1,43 @@
+<h1>List of planets</h1>
+<link rel="stylesheet" href="/css/listOfPlanets.css">
+<a href="/solarsystem/add">Add star</a>
+<table id="container">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Tags</th>
+        <th>Availability</th>
+    </tr>
+    {{#products}}
+    <tr id="row-{{socksid}}">
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{productid}}</a>
+        </td>
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{productName}}</a>
+        </td>
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{productSize}}</a>
+        </td>
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{productDescription}}</a>
+        </td>
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{productImage}}</a>
+        </td>
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{productTags}}</a>
+        </td>
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{productAvailability}}</a>
+        </td>
+        </td>
+    </tr>
+    {{/solarsystem}}
+</table>
+<script src="scripts/listOfPlanets.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<a href="List of Planets"></a>
