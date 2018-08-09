@@ -1,8 +1,9 @@
-<h1>Single Product Detail</h1>
-<div>
+<h1>Single Product Details</h1>
+<link rel="stylesheet" href="/css/planetDetails.css">
+<div id="container">
     <div>
         <span>Id:</span>
-        <span>{{id}}</span>
+        <span>{{productid}}</span>
     </div>
     <div>
         <span>Name</span>
@@ -14,7 +15,7 @@
     </div>
     <div>
         <span>Image:</span>
-        <span>{{Image}}</span>
+       <img src="/images/{{image}}">
     </div>
     <div>
         <span>Tags</span>
@@ -29,4 +30,5 @@
         <span>{{Availability}}</span>
     </div>
 </div>
-<a href="/pets">List Of pets</a>
+<a href="/ProductsInfo">List Of Products</a>
+<!--this is from server.js -->

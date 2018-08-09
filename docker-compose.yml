@@ -1,10 +1,10 @@
 version: "3.3"
 services: 
   db: 
-    image: sample-db
+    image: onlineShop-db
     volumes: 
-      - sample-data:/var/lib/postgresql/data
+      - shop-data:/var/lib/postgresql/data
     ports: 
       - 5432:5432
 volumes:
-  sample-data:
+  shop-data:

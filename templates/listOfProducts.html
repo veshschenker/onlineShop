@@ -1,6 +1,5 @@
-<h1>List of planets</h1>
-<link rel="stylesheet" href="/css/listOfPlanets.css">
-<a href="/solarsystem/add">Add star</a>
+<h1>List of Products</h1>
+<link rel="stylesheet" href="/css/listOfProducts.css">
 <table id="container">
     <tr>
         <th>Id</th>
@@ -9,6 +8,7 @@
         <th>Description</th>
         <th>Image</th>
         <th>Tags</th>
+        <th>Price</th>
         <th>Availability</th>
     </tr>
     {{#products}}
@@ -17,27 +17,30 @@
             <a href="/Item/{{productid}}">{{productid}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{productName}}</a>
+            <a href="/Item/{{productid}}">{{name}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{productSize}}</a>
+            <a href="/Item/{{productid}}">{{size}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{productDescription}}</a>
+            <a href="/Item/{{productid}}">{{description}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{productImage}}</a>
+            <a href="/Item/{{productid}}">{{image}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{productTags}}</a>
+            <a href="/Item/{{productid}}">{{tags}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{productAvailability}}</a>
+            <a href="/Item/{{productid}}">{{Price}}</a>
+        </td>
+        <td class="demo">
+            <a href="/Item/{{productid}}">{{availability}}</a>
         </td>
         </td>
     </tr>
     {{/solarsystem}}
 </table>
-<script src="scripts/listOfPlanets.js"></script>
+<script src="scripts/listOfProducts.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<a href="List of Planets"></a>
+<a href="List of products"></a>
