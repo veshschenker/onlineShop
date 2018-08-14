@@ -1,46 +1,45 @@
 <h1>List of Products</h1>
 <link rel="stylesheet" href="/css/listOfProducts.css">
+<div>
+    <button onclick="signup()">Signup</button>
+    <button onclick="login()">Login</button>
+</div>
 <table id="container">
     <tr>
         <th>Id</th>
         <th>Name</th>
         <th>Size</th>
-        <th>Description</th>
         <th>Image</th>
         <th>Tags</th>
         <th>Price</th>
         <th>Availability</th>
     </tr>
     {{#products}}
-    <tr id="row-{{socksid}}">
+    <tr id="row-{{productid}}">
         <td class="demo">
-            <a href="/Item/{{productid}}">{{productid}}</a>
+            <a href="/items/{{productid}}">{{productid}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{name}}</a>
+            <a href="/items/{{productid}}">{{name}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{size}}</a>
+            <a href="/Items/{{productid}}">{{size}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{description}}</a>
+            <img src="{{image}}" alt="{{name}}">
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{image}}</a>
+            <a href="/items/{{productid}}">{{tags}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{tags}}</a>
+            <a href="/Items/{{productid}}">{{price}}</a>
         </td>
         <td class="demo">
-            <a href="/Item/{{productid}}">{{Price}}</a>
-        </td>
-        <td class="demo">
-            <a href="/Item/{{productid}}">{{availability}}</a>
-        </td>
+            <a href="/Items/{{productid}}">{{availability}}</a>
         </td>
     </tr>
-    {{/solarsystem}}
+    {{/products}}
 </table>
+<a href="/items">List of products</a>
 <script src="scripts/listOfProducts.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<a href="List of products"></a>

@@ -3,32 +3,36 @@
 <div id="container">
     <div>
         <span>Id:</span>
-        <span>{{productid}}</span>
+        <span>{{product.productid}}</span>
     </div>
     <div>
         <span>Name</span>
-        <span>{{name}}</span>
+        <span>{{product.name}}</span>
     </div>
     <div>
         <span>Size</span>
-        <span>{{size}}</span>
+        <span>{{product.size}}</span>
     </div>
     <div>
         <span>Image:</span>
-       <img src="/images/{{image}}">
+       <img src="{{product.image}}" alt="{{product.name}}">
     </div>
     <div>
         <span>Tags</span>
-        <span>{{Tags}}</span>
+        <span>{{product.tags}}</span>
     </div>
     <div>
         <span>Price</span>
-        <span>{{Price}}</span>
+        <span>{{product.price}}</span>
     </div>
     <div>
         <span>Availability</span>
-        <span>{{Availability}}</span>
+        <span>{{product.availability}}</span>
+    </div>
+    <div>
+        <span>Description</span>
+        <span>{{product.description}}</span>
     </div>
 </div>
-<a href="/ProductsInfo">List Of Products</a>
+<a href="/items">List Of Products</a>
 <!--this is from server.js -->
