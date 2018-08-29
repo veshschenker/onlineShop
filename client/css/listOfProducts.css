@@ -1,0 +1,15 @@
+body{
+    margin: 50px;
+}
+
+#container{
+    padding: 5px;
+    margin: 20px;
+    background-color: cadetblue;
+}
+
+img{
+    height: 35%;
+    width: 35%;
+    margin-left: 10px;
+}

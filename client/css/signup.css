@@ -1,0 +1,20 @@
+body{
+    margin: 50px;
+    border: 5px solid lightslategray;
+    background-color:skyblue ;
+}
+span{
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+}
+
+#container{
+    margin: 20px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wording{
+   font-family: Arial, Helvetica, sans-serif;
+}

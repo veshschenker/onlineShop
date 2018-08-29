@@ -1,3 +1,13 @@
+CREATE TABLE users(
+    userid serial unique primary key,
+    username character varying(20) not null,
+    email character varying(50) not null,
+    password character varying(50) not null
+);
+
+ALTER TABLE users
+    OWNER TO schenker;
+
 CREATE TABLE productstable(
     productid serial unique primary key,
     name character varying(20) not null,

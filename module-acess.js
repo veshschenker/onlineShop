@@ -29,3 +29,21 @@ exports.getProductById = async function(productid){
     }
     return result.rows[0];
 }
+
+exports.signup = async function(username, email, password) {
+    const sql = "INSERT INTO users(username, email, password) VALUES($1,$2,$3)";
+    const values = [username, email, password];
+    const result = await dbClient.query(sql, values);
+    //TODO: Error handling...
+} //inserts new data into a database
+
+exports.login = async function(username, password){
+    console.log("Trying to login...");
+    const sql = "SELECT * FROM users WHERE username=$1 AND password=$2";
+    const values = [username, password];
+    const result = await dbClient.query(sql, values);
+    if(result.rowCount == 1){
+        return true;
+    }
+    return false;
+}

@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/signup.css">
-    <title>Login</title>
+    <title>Signup</title>
 </head>
 <body>
-    <div>
-        <div>To login please enter you username and password.</div>
+    <div id="container">
+        <div>Welcome to Veronicah's Socks Paradise. To signup please enter you username, email address and password.</div>
         <div><span>Username:</span><input type="text" id="username"></div>
+        <div><span>Email:</span><input type="email" id="email"></div>
         <div><span>Password:</span><input type="password" id="password"></div>
+        <div><span>Confirm Password:</span><input type="password" id="confirmPassword"></div>
         <button onclick="cancel()">Cancel</button>
-        <button onclick="login()">Login</button>
+        <button onclick="signup()">Signup</button>
         <div id="message"></div>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="scripts/login.js"></script>
+    <script src="scripts/signup.js"></script>
 </body>
 </html>

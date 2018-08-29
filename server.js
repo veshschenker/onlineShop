@@ -17,6 +17,15 @@ app.listen(3000, () => {
 app.get('/', (req, res) => {
     res.status(200).send('database sample application');
 })
+
+app.get('/signup', (req,res)=>{
+    res.render('signup');
+})
+
+app.get('/login', (req,res)=>{
+    res.render('login');
+})
+
 app.get('/items', async (req, res) => {
     console.log('rendering list of items');
     var products = await mdAccess.productstable();
@@ -50,16 +59,16 @@ app.get('/api/items/:id', async (req, res) => {
 })
 
 app.post('/api/signup', async (req,res)=>{
-    // get username and password from the request body
-    await mdAccess.signup(username, password);  // this adds a new record to the table 'users'
+    var data = req.body;
+    await mdAccess.signup(data.username, data.email, data.password);  // this adds a new record to the table 'users'
     res.sendStatus(201);  // created (a new user)
 })
 
 app.post('/api/login', async (req,res)=>{
-    // get username and password from the request body
-    var ok = await mdAccess.login(username, password);   // compares given username/password with what I have in the users table
+    var data = req.body;
+    var ok = await mdAccess.login(data.username, data.password);   // compares given username/password with what I have in the users table
     if(ok==false){
-        res.status(404).send("Wrong username or password");
+        res.status(400).send("Wrong username or password");
     } else {
         res.sendStatus(200);
     }
