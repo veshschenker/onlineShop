@@ -54,6 +54,7 @@ app.get('/api/items/:id', async (req, res) => {
     const result = await mdAccess.getProductById(itemid);
     if (result) {
         res.status(200).send(result);
+        return;
     }
     res.sendStatus(404);
 })
@@ -72,4 +73,15 @@ app.post('/api/login', async (req,res)=>{
     } else {
         res.sendStatus(200);
     }
+})
+
+app.get('/addToCart', async (req,res)=>{
+    res.render ('addToCart')
+})
+
+app.post('/api/addProductToCart', async (req,res) =>{
+    var data = req.body;
+    await mdAccess.addProductToCart(data.userid, data.productid, data.quantity);  // this adds a new record to the table 'cartitems'
+    res.sendStatus(201);  // created (a new cart item)
+
 })

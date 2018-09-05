@@ -47,3 +47,12 @@ exports.login = async function(username, password){
     }
     return false;
 }
+
+exports.addProductToCart = async function(userid, productid, quantity){
+    console.log('Adding cart item');
+    const sql = 'INSERT INTO cartitems(userid, productid, quantity, unitprice) VALUES($1,$2,$3,$4)';
+    const unitprice = 111.25;
+    const values = [userid, productid, quantity, unitprice];
+    const result = await dbClient.query(sql, values);
+    //TODO: Error handling...
+} // inserts new value into table 'cartitems'

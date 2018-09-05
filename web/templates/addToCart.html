@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/css/addToCart.css">
+</head>
+<body>
+    <div id="container">
+        <span>Quantity</span>
+          <input id="quantity" type="number"/>
+          <br>
+        <span>Product Id</span>
+        <input id="productid" type="number"/> 
+        <br>
+        <span>User Id</span>
+        <input id="userid" type="number"/> 
+        <br>
+          <button onclick="add()">Add to Cart!</button>
+          <br>
+          <button onclick="cancel()">Cancel</button>
+        
+      </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="scripts/addToCart.js"></script>
+</body>
+
+</html>

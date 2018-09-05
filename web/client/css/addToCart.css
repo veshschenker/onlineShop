@@ -1,0 +1,15 @@
+
+span{
+    display: inline-block;
+    width: 150px;
+    margin: 5px;
+}
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin:70px;
+    background-color: #7EC855;
+    font-family: 'Roboto', sans-serif;
+  }

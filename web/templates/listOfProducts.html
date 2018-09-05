@@ -12,7 +12,7 @@
         <th>Image</th>
         <th>Tags</th>
         <th>Price</th>
-        <th>Availability</th>
+        <th>On Stock</th>
     </tr>
     {{#products}}
     <tr id="row-{{productid}}">
@@ -35,7 +35,7 @@
             <a href="/Items/{{productid}}">{{price}}</a>
         </td>
         <td class="demo1">
-            <a href="/Items/{{productid}}">{{availability}}</a>
+            <a href="/Items/{{productid}}">{{onstock}}</a>
         </td>
     </tr>
     {{/products}}

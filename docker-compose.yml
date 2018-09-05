@@ -1,6 +1,7 @@
 version: "3.3"
 services: 
   db: 
+    build: db
     image: onlineshop-db
     volumes: 
       - shop-data:/var/lib/postgresql/data
